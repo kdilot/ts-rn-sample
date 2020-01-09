@@ -1,14 +1,13 @@
 import * as React from 'react';
 import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import { Test, Test2, Test3, Stack } from '@screen';
 
 interface Props {}
-
 interface State {}
 
 const MainNavigation = createAppContainer(
-    createStackNavigator(
+    createMaterialTopTabNavigator(
         {
             Test2: {
                 screen: Test2,
@@ -24,15 +23,14 @@ const MainNavigation = createAppContainer(
             },
         },
         {
-            initialRouteName: 'Stack',
+            initialRouteName: 'Test2',
         },
     ),
 );
 
-export default class StackNavigation extends React.Component<Props, State> {
+export default class TabNavigation extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
-        this.state = {};
     }
 
     render() {
