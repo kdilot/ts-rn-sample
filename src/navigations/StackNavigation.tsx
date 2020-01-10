@@ -25,9 +25,16 @@ const MainNavigation = createAppContainer(
         },
         {
             initialRouteName: 'Stack',
+            defaultNavigationOptions: {
+                headerTitleAlign: 'center',
+            },
         },
     ),
 );
+
+MainNavigation.navigationOptions = {
+    headerTitleAlign: 'asdf',
+};
 
 export default class StackNavigation extends React.Component<Props, State> {
     constructor(props: Props) {
