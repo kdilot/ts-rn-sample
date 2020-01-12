@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { View, Button, StyleSheet } from 'react-native';
 import { NavigationScreenProp } from 'react-navigation';
+import { ButtonComp } from '@component';
 
 interface Props {
     navigation: NavigationScreenProp<any, any>;
@@ -26,6 +27,9 @@ export default class Stack extends React.Component<Props, State> {
                 </View>
                 <View style={styles.groupButton}>
                     <Button title="Test3" onPress={() => navigation.navigate('Test3')} />
+                </View>
+                <View style={styles.groupButton}>
+                    <ButtonComp outline={true} icon={true} />
                 </View>
             </View>
         );
