@@ -29,7 +29,7 @@ export default class Stack extends React.Component<Props, State> {
                     <Button title="Test3" onPress={() => navigation.navigate('Test3')} />
                 </View>
                 <View style={styles.groupButton}>
-                    <ButtonComp outline={true} icon={true} />
+                    <ButtonComp outline={true} disabled={false} onPress={() => {}} />
                 </View>
             </View>
         );

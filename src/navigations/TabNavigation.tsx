@@ -24,6 +24,7 @@ const MainNavigation = createAppContainer(
         },
         {
             initialRouteName: 'Test2',
+            tabBarPosition: 'bottom',
         },
     ),
 );
