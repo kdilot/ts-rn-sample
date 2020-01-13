@@ -31,6 +31,9 @@ export default class Stack extends React.Component<Props, State> {
                 <View style={styles.groupButton}>
                     <ButtonComp outline={true} disabled={false} onPress={() => {}} />
                 </View>
+                <View style={styles.groupButton}>
+                    <ButtonComp value={'Drawer'} onPress={() => navigation.openDrawer()} />
+                </View>
             </View>
         );
     }

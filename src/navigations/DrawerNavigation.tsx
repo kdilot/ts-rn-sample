@@ -24,7 +24,8 @@ const MainNavigation = createAppContainer(
             },
         },
         {
-            initialRouteName: 'Test2',
+            initialRouteName: 'Stack',
+            drawerType: 'slide',
         },
     ),
 );
