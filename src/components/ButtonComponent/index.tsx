@@ -39,7 +39,7 @@ interface Styles {
     iconView: any;
 }
 
-export default class ButtonComp extends React.PureComponent<Props, State> {
+export default class ButtonComponent extends React.PureComponent<Props, State> {
     static defaultProps: DefaultProps = {
         activeOpacity: 0.8,
         value: 'button',
