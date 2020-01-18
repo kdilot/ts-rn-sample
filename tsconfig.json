@@ -9,10 +9,7 @@
         "emitDecoratorMetadata": true,
         "baseUrl": ".",
         "paths": {
-            "@screen": ["src/screens"],
-            "@component": ["src/components"],
-            "@navigation": ["src/navigations"],
-            "@test/*": ["src/test/*"]
+            "@screen": ["src/screens"]
         }
     },
     "include": ["src/**/*"]
