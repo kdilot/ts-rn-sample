@@ -1,14 +1,17 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { Provider } from 'react-redux';
 import MainScreen from './screens/MainScreen';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import store from '@store';
 
 export default class App extends React.Component {
     render() {
         return (
-            <SafeAreaProvider>
-                <MainScreen />
-            </SafeAreaProvider>
+            <Provider store={store}>
+                <SafeAreaProvider>
+                    <MainScreen />
+                </SafeAreaProvider>
+            </Provider>
         );
     }
 }

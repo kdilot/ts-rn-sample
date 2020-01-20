@@ -1,4 +1,4 @@
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     ContainerView: {
@@ -44,11 +44,29 @@ export default StyleSheet.create({
         width: '100%',
     },
     ListView: {
-        height: 30,
+        height: 40,
         justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+    },
+    ListTextView: {
+        flex: 4,
+        paddingLeft: 10,
+        justifyContent: 'center',
+        alignItems: 'flex-start',
     },
     ListText: {
         fontSize: 17,
+    },
+    RemoveView: {
+        flex: 1,
+    },
+    RemoveText: {
+        marginLeft: 5,
+        padding: 5,
+        borderRadius: 5,
+        borderWidth: 1,
+        textAlign: 'center',
     },
     ListDoneText: {
         textDecorationLine: 'line-through',
