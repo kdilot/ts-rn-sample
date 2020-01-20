@@ -1,4 +1,4 @@
-package com.test;
+package com.rntypescript;
 
 import android.app.Application;
 import android.content.Context;
