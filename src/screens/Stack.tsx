@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import { View, StyleSheet, SafeAreaView } from 'react-native';
 import { NavigationScreenProp } from 'react-navigation';
-import { ButtonComponent, AlertComponent, PopupComponent } from '@component';
+import { ButtonComponent, PopupComponent } from '@component';
 
 interface Props {
     navigation: NavigationScreenProp<any, any>;
@@ -20,20 +20,11 @@ export default class Stack extends React.Component<Props, State> {
         };
     }
 
-    flag = () => {
-        this.setState({ flag: true });
-        setTimeout(() => {
-            this.setState({ flag: false });
-        }, 2000);
-    };
-
     render() {
         const { navigation } = this.props;
-        const { flag } = this.state;
         return (
             <PopupComponent ref={(ref: any) => (this.popup = ref)}>
-                {flag && <AlertComponent />}
-                <View style={styles.containerView}>
+                <SafeAreaView style={styles.containerView}>
                     <View style={styles.groupButton}>
                         <ButtonComponent outline={true} disabled={false} onPress={() => {}} />
                     </View>
@@ -50,12 +41,9 @@ export default class Stack extends React.Component<Props, State> {
                         <ButtonComponent value={'Drawer'} onPress={() => navigation.openDrawer()} />
                     </View>
                     <View style={styles.groupButton}>
-                        <ButtonComponent value={'Alert'} onPress={() => this.flag()} />
-                    </View>
-                    <View style={styles.groupButton}>
                         <ButtonComponent value={'Popup'} onPress={() => this.popup.showPopup('TTT', 'asdfa')} />
                     </View>
-                </View>
+                </SafeAreaView>
             </PopupComponent>
         );
     }
@@ -63,7 +51,7 @@ export default class Stack extends React.Component<Props, State> {
 
 const styles = StyleSheet.create({
     containerView: {
-        padding: 10,
+        margin: 10,
     },
     groupButton: {
         margin: 5,
