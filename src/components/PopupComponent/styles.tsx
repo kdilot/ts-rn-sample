@@ -1,9 +1,20 @@
-import { StyleSheet, Dimensions, Platform, StatusBar } from 'react-native';
+import { StyleSheet, Dimensions, Platform, StatusBar, ViewStyle, TextStyle } from 'react-native';
 
 const WIDTH = Dimensions.get('window').width;
 const HEIHGT = Dimensions.get('window').height;
 
-export default StyleSheet.create({
+interface Styles {
+    ContainerView: ViewStyle;
+    BackgroundView: ViewStyle;
+    CloseView: ViewStyle;
+    CloseText: TextStyle;
+    MsgView: ViewStyle;
+    MsgHeaderView: ViewStyle;
+    MsgContentView: ViewStyle;
+    MsgHeaderText: TextStyle;
+}
+
+export default StyleSheet.create<Styles>({
     ContainerView: {
         flex: 1,
         zIndex: 9999,
