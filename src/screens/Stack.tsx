@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, StyleSheet, SafeAreaView } from 'react-native';
 import { NavigationScreenProp } from 'react-navigation';
-import { ButtonComponent, PopupComponent, ToastComponent } from '@component';
+import { ButtonComponent, PopupComponent, ToastComponent, IconComponent as Icon } from '@component';
 
 interface Props {
     navigation: NavigationScreenProp<any, any>;
@@ -26,6 +26,9 @@ export default class Stack extends React.Component<Props, State> {
         return (
             <PopupComponent ref={(ref: any) => (this.popup = ref)}>
                 <SafeAreaView style={styles.containerView}>
+                    <View style={styles.iconView}>
+                        <Icon size={40} name={'user'} />
+                    </View>
                     <View style={styles.groupButton}>
                         <ButtonComponent outline={true} disabled={false} onPress={() => {}} />
                     </View>
@@ -60,5 +63,10 @@ const styles = StyleSheet.create({
     },
     groupButton: {
         margin: 5,
+    },
+    iconView: {
+        margin: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 });
