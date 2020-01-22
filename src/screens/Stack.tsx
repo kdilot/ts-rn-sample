@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, StyleSheet, SafeAreaView } from 'react-native';
 import { NavigationScreenProp } from 'react-navigation';
-import { ButtonComponent, PopupComponent } from '@component';
+import { ButtonComponent, PopupComponent, ToastComponent } from '@component';
 
 interface Props {
     navigation: NavigationScreenProp<any, any>;
@@ -13,6 +13,7 @@ interface State {
 
 export default class Stack extends React.Component<Props, State> {
     popup: any = null;
+    toast: any = null;
     constructor(props: Props) {
         super(props);
         this.state = {
@@ -43,7 +44,11 @@ export default class Stack extends React.Component<Props, State> {
                     <View style={styles.groupButton}>
                         <ButtonComponent value={'Popup'} onPress={() => this.popup.showPopup('TTT', 'asdfa')} />
                     </View>
+                    <View style={styles.groupButton}>
+                        <ButtonComponent value={'Toast'} onPress={() => this.toast.showToast('TOAST')} />
+                    </View>
                 </SafeAreaView>
+                <ToastComponent ref={(ref: any) => (this.toast = ref)} />
             </PopupComponent>
         );
     }
