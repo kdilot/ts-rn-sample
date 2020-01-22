@@ -49,18 +49,18 @@ export default class PopupComponent extends React.PureComponent<Props, State> {
         const { children } = this.props;
         const { isClose, isCloseable, title, content } = this.state;
         return (
-            <View style={styles.container}>
-                <View style={[styles.backgroundLayout, isClose && { top: HEIHGT }]}>
+            <View style={styles.ContainerView}>
+                <View style={[styles.BackgroundView, isClose && { top: HEIHGT }]}>
                     {isCloseable && (
-                        <TouchableOpacity style={styles.closeLayout} activeOpacity={1} onPress={this.closePopup}>
-                            <Text style={styles.closeText}>X</Text>
+                        <TouchableOpacity style={styles.CloseView} activeOpacity={1} onPress={this.closePopup}>
+                            <Text style={styles.CloseText}>X</Text>
                         </TouchableOpacity>
                     )}
-                    <View style={styles.msgLayout}>
-                        <View style={styles.msgHeaderLayout}>
-                            <Text style={styles.msgHeaderText}>{title}</Text>
+                    <View style={styles.MsgView}>
+                        <View style={styles.MsgHeaderView}>
+                            <Text style={styles.MsgHeaderText}>{title}</Text>
                         </View>
-                        <View style={styles.msgContentLayout}>
+                        <View style={styles.MsgContentView}>
                             <Text>{content}</Text>
                         </View>
                     </View>

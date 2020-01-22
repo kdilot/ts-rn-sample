@@ -1,14 +1,14 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, Platform, StatusBar } from 'react-native';
 
 const WIDTH = Dimensions.get('window').width;
 const HEIHGT = Dimensions.get('window').height;
 
 export default StyleSheet.create({
-    container: {
+    ContainerView: {
         flex: 1,
         zIndex: 9999,
     },
-    backgroundLayout: {
+    BackgroundView: {
         position: 'absolute',
         top: 0,
         width: WIDTH,
@@ -17,9 +17,9 @@ export default StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: 'rgba(0, 0, 0, 0.6)',
     },
-    closeLayout: {
+    CloseView: {
         position: 'absolute',
-        top: 0,
+        top: Platform.OS === 'ios' ? 40 : 0,
         justifyContent: 'center',
         margin: 10,
         padding: 5,
@@ -29,12 +29,12 @@ export default StyleSheet.create({
         borderRadius: 5,
         backgroundColor: 'white',
     },
-    closeText: {
+    CloseText: {
         fontWeight: 'bold',
         fontSize: 15,
         textAlign: 'center',
     },
-    msgLayout: {
+    MsgView: {
         justifyContent: 'center',
         alignSelf: 'center',
         alignItems: 'center',
@@ -44,15 +44,15 @@ export default StyleSheet.create({
         backgroundColor: 'white',
         padding: 15,
     },
-    msgHeaderLayout: {
+    MsgHeaderView: {
         flex: 1,
         justifyContent: 'center',
     },
-    msgContentLayout: {
+    MsgContentView: {
         flex: 3,
         justifyContent: 'center',
     },
-    msgHeaderText: {
+    MsgHeaderText: {
         fontSize: 17,
         fontWeight: 'bold',
     },
