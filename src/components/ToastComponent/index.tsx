@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Text, Dimensions, Animated, View } from 'react-native';
+import { Text, Dimensions, Animated } from 'react-native';
 import styles from './styles';
 
 interface Props {
-    ref: React.Ref<View>;
+    ref: React.Ref<any>;
 }
 interface State {
     animation: Animated.Value;
@@ -19,10 +19,10 @@ export default class ToastComponent extends React.PureComponent<Props, State> {
         };
     }
 
-    showToast = (message: string = 'Toast Message', timer: number = 1500) => {
+    showToast = (message: string, timer: number = 1500) => {
         const { animation } = this.state;
 
-        this.setState({ message });
+        message && this.setState({ message });
 
         Animated.timing(animation, {
             toValue: 0,

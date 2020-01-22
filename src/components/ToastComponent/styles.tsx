@@ -1,6 +1,11 @@
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet, Platform, TextStyle, ViewStyle } from 'react-native';
 
-export default StyleSheet.create({
+interface Styles {
+    ContainerView: ViewStyle;
+    MsgText: TextStyle;
+}
+
+export default StyleSheet.create<Styles>({
     ContainerView: {
         position: 'absolute',
         zIndex: 9999,
