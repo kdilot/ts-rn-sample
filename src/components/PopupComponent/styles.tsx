@@ -1,7 +1,7 @@
-import { StyleSheet, Dimensions, Platform, StatusBar, ViewStyle, TextStyle } from 'react-native';
+import { StyleSheet, Dimensions, Platform, ViewStyle, TextStyle } from 'react-native';
 
 const WIDTH = Dimensions.get('window').width;
-const HEIHGT = Dimensions.get('window').height;
+const HEIHGT = '100%';
 
 interface Styles {
     ContainerView: ViewStyle;
@@ -30,7 +30,8 @@ export default StyleSheet.create<Styles>({
     },
     CloseView: {
         position: 'absolute',
-        top: Platform.OS === 'ios' ? 40 : 0,
+        // top: Platform.OS === 'ios' ? 40 : 0,
+        top: 0,
         justifyContent: 'center',
         margin: 10,
         padding: 5,
@@ -50,7 +51,7 @@ export default StyleSheet.create<Styles>({
         alignSelf: 'center',
         alignItems: 'center',
         width: '60%',
-        height: '20%',
+        height: 150,
         borderRadius: 5,
         backgroundColor: 'white',
         padding: 15,
