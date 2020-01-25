@@ -5311,7 +5311,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -5400,6 +5400,17 @@ react-native-iphone-x-helper@^1.2.1:
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
 
+"react-native-material-ripple@git+https://github.com/lukebrandonfarrell/react-native-material-ripple.git":
+  version "0.8.0"
+  resolved "git+https://github.com/lukebrandonfarrell/react-native-material-ripple.git#45fc11d6e529c523d04d6a94730ef26a87e82754"
+  dependencies:
+    prop-types "^15.5.10"
+
+react-native-pins@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-pins/-/react-native-pins-1.0.2.tgz#4e9aa68fddc5aecf0167a0a144ca8b8e6b64e386"
+  integrity sha512-gSNVu9yUCmbocP+8AV4mpfd74sk8V0KnNQmmthSTlhgpYvoVN813SK6/Yl0Mu9X0aJPZKElgBRyPW4xu6h+UFQ==
+
 react-native-reanimated@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.4.0.tgz#7f1acbf9be08492d834f512700570978052be2f9"
@@ -5416,6 +5427,13 @@ react-native-safe-area-view@^0.14.1, react-native-safe-area-view@^0.14.6:
   integrity sha512-MtRSIcZNstxv87Jet+UsPhEd1tpGe8cVskDXlP657x6rHpSrbrc+y13ZNXrwAgGNNhqQNX7UJT68ZIq//ZRmvw==
   dependencies:
     hoist-non-react-statics "^2.3.1"
+
+react-native-screen-keyboard@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-screen-keyboard/-/react-native-screen-keyboard-1.2.0.tgz#96496b7cef26af47f86b1ede777a7b194ed2b845"
+  integrity sha512-rYt/DQ/gFwLxiHd+GPgBHwDpW6z58Bv7YjULCwD8LITk/nX/CDunQW3nWpMosrvuL8HOhzPVdkVGhaQWYdIXjQ==
+  dependencies:
+    react-native-material-ripple "git+https://github.com/lukebrandonfarrell/react-native-material-ripple.git"
 
 "react-native-screens@^1.0.0 || ^1.0.0-alpha":
   version "1.0.0-alpha.23"
