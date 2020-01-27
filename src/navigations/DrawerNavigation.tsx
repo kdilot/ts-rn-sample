@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createDrawerNavigator } from 'react-navigation-drawer';
-import { Test, Test2, Test3, Stack } from '@screen';
+import { Test, Test2, Test3, Stack, PinCodeScreen } from '@screen';
 
 interface Props {}
 
@@ -21,6 +21,9 @@ const MainNavigation = createAppContainer(
             },
             Stack: {
                 screen: Stack,
+            },
+            Pincode: {
+                screen: PinCodeScreen,
             },
         },
         {
