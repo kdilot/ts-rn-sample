@@ -100,8 +100,8 @@ class FingerPrint extends React.PureComponent<Props, State> {
                     </View>
                     <View style={S.MessageView}>
                         <AnimationText
-                            ref={instance => {
-                                this.description = instance;
+                            ref={(ref: any) => {
+                                this.description = ref;
                             }}
                             style={S.Description(errorMessage)}>
                             {errorMessage || '지문을 인식해주세요'}
