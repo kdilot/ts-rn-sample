@@ -55,5 +55,7 @@
 	<false/>
 	<key>NSCameraUsageDescription</key>
 	<string>Use Camera</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>requires FaceID access to allows you quick and secure access.</string>
 </dict>
 </plist>

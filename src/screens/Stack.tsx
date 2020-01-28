@@ -59,6 +59,9 @@ export default class Stack extends React.Component<Props, State> {
                     <View style={styles.groupButton}>
                         <ButtonComponent value={'Qrcode Scanner'} onPress={() => navigation.navigate('QrcodeScanner')} />
                     </View>
+                    <View style={styles.groupButton}>
+                        <ButtonComponent value={'Fingerprint'} onPress={() => navigation.navigate('Fingerprint')} />
+                    </View>
                 </SafeAreaView>
                 <ToastComponent ref={(ref: any) => (this.toast = ref)} />
             </PopupComponent>

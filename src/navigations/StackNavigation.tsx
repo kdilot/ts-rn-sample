@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import { Test, Test2, Test3, Stack, PinCodeScreen, QrcodeTextScreen, QrcodeScannerScreen } from '@screen';
+import { Test, Test2, Test3, Stack, PinCodeScreen, QrcodeTextScreen, QrcodeScannerScreen, FingerprintScreen } from '@screen';
 
 interface Props {}
 
@@ -30,6 +30,9 @@ const MainNavigation = createAppContainer(
             },
             QrcodeScanner: {
                 screen: QrcodeScannerScreen,
+            },
+            Fingerprint: {
+                screen: FingerprintScreen,
             },
         },
         {

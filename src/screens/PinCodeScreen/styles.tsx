@@ -1,4 +1,4 @@
-import { StyleSheet, ViewStyle, View, TextStyle } from 'react-native';
+import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 
 interface Styles {
     ContainerView: ViewStyle;
@@ -11,7 +11,7 @@ interface Styles {
     InputView: ViewStyle;
 }
 
-export default StyleSheet.create({
+export default StyleSheet.create<Styles>({
     ContainerView: {
         flex: 1,
     },

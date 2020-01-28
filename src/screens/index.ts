@@ -5,3 +5,4 @@ export { default as Stack } from './Stack';
 export { default as PinCodeScreen } from './PinCodeScreen';
 export { default as QrcodeTextScreen } from './QrcodeTextScreen';
 export { default as QrcodeScannerScreen } from './QrcodeScannerScreen';
+export { default as FingerprintScreen } from './FingerprintScreen';
