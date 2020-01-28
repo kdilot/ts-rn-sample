@@ -19,6 +19,7 @@ class FingerPrint extends React.PureComponent<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = { errorMessage: undefined, appState: null };
+        //
     }
 
     componentDidMount() {
