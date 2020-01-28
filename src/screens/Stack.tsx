@@ -45,7 +45,7 @@ export default class Stack extends React.Component<Props, State> {
                         <ButtonComponent value={'Drawer'} onPress={() => navigation.openDrawer()} />
                     </View>
                     <View style={styles.groupButton}>
-                        <ButtonComponent value={'Popup'} onPress={() => this.popup.showPopup('TTT', 'asdfa')} />
+                        <ButtonComponent value={'Popup'} onPress={() => this.popup.showPopup()} />
                     </View>
                     <View style={styles.groupButton}>
                         <ButtonComponent value={'Toast'} onPress={() => this.toast.showToast('TOAST')} />

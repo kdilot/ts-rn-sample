@@ -58,6 +58,7 @@ export default StyleSheet.create<Styles>({
     },
     MsgHeaderView: {
         flex: 1,
+        paddingTop: 5,
         justifyContent: 'center',
     },
     MsgContentView: {
