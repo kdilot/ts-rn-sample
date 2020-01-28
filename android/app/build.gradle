@@ -131,6 +131,11 @@ android {
         applicationId "com.rntypescript"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        
+        // react-native-camera
+        missingDimensionStrategy 'react-native-camera', 'general'
+	    missingDimensionStrategy 'react-native-camera', 'mlkit'
+        
         versionCode 1
         versionName "1.0"
     }
