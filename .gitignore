@@ -60,5 +60,3 @@ buck-out/
 
 # vscode
 .vscode
-
-Podfile.lock
