@@ -50,6 +50,9 @@ export default class Stack extends React.Component<Props, State> {
                     <View style={styles.groupButton}>
                         <ButtonComponent value={'Toast'} onPress={() => this.toast.showToast('TOAST')} />
                     </View>
+                    <View style={styles.groupButton}>
+                        <ButtonComponent value={'Pincode'} onPress={() => navigation.navigate('Pincode')} />
+                    </View>
                 </SafeAreaView>
                 <ToastComponent ref={(ref: any) => (this.toast = ref)} />
             </PopupComponent>
