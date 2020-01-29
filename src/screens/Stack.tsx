@@ -2,6 +2,7 @@ import * as React from 'react';
 import { View, StyleSheet, SafeAreaView } from 'react-native';
 import { NavigationScreenProp } from 'react-navigation';
 import { ButtonComponent, PopupComponent, ToastComponent, IconComponent as Icon } from '@component';
+import KakaoLogins from '@react-native-seoul/kakao-login';
 
 interface Props {
     navigation: NavigationScreenProp<any, any>;
@@ -20,6 +21,21 @@ export default class Stack extends React.Component<Props, State> {
             flag: false,
         };
     }
+
+    kakaoLogin = () => {
+        console.log('start');
+        KakaoLogins.login()
+            .then(result => {
+                console.log(result);
+            })
+            .catch(err => {
+                if (err.code === 'E_CANCELLED_OPERATION') {
+                    console.log(err);
+                } else {
+                    console.log(err);
+                }
+            });
+    };
 
     render() {
         const { navigation } = this.props;
@@ -46,6 +62,9 @@ export default class Stack extends React.Component<Props, State> {
                     </View>
                     <View style={styles.groupButton}>
                         <ButtonComponent value={'Fingerprint'} onPress={() => navigation.navigate('Fingerprint')} />
+                    </View>
+                    <View style={styles.groupButton}>
+                        <ButtonComponent value={'Kakao Social Login'} color={'#ffcd00'} onPress={() => this.kakaoLogin()} />
                     </View>
                 </SafeAreaView>
                 <ToastComponent ref={(ref: any) => (this.toast = ref)} />
