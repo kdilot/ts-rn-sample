@@ -56,7 +56,7 @@ export default class PopupComponent extends React.PureComponent<Props, State> {
                             <Text style={styles.MsgHeaderText}>{title}</Text>
                         </View>
                         <View style={styles.MsgContentView}>
-                            <Text>{content}</Text>
+                            <Text style={styles.MsgContentText}>{content}</Text>
                         </View>
                         {isCloseable && (
                             <View style={styles.MsgButtonView}>

@@ -12,6 +12,8 @@ interface Styles {
     MsgHeaderView: ViewStyle;
     MsgContentView: ViewStyle;
     MsgHeaderText: TextStyle;
+    MsgContentText: TextStyle;
+    MsgButtonView: ViewStyle;
 }
 
 export default StyleSheet.create<Styles>({
@@ -28,24 +30,6 @@ export default StyleSheet.create<Styles>({
         justifyContent: 'center',
         backgroundColor: 'rgba(0, 0, 0, 0.6)',
     },
-    CloseView: {
-        position: 'absolute',
-        // top: Platform.OS === 'ios' ? 40 : 0,
-        top: 0,
-        justifyContent: 'center',
-        margin: 10,
-        padding: 5,
-        width: 40,
-        height: 40,
-        zIndex: 1,
-        borderRadius: 5,
-        backgroundColor: 'white',
-    },
-    CloseText: {
-        fontWeight: 'bold',
-        fontSize: 15,
-        textAlign: 'center',
-    },
     MsgView: {
         justifyContent: 'center',
         alignSelf: 'center',
@@ -58,15 +42,38 @@ export default StyleSheet.create<Styles>({
     },
     MsgHeaderView: {
         flex: 1,
-        paddingTop: 5,
+        width: '100%',
         justifyContent: 'center',
     },
     MsgContentView: {
-        flex: 3,
+        flex: 5,
+        width: '100%',
         justifyContent: 'center',
+    },
+    MsgButtonView: {
+        flex: 2,
+        width: '100%',
+    },
+    CloseView: {
+        width: '100%',
+        height: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 5,
+        backgroundColor: 'silver',
+    },
+    CloseText: {
+        fontWeight: 'bold',
+        fontSize: 15,
+        textAlign: 'center',
+        color: 'white',
     },
     MsgHeaderText: {
         fontSize: 17,
         fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    MsgContentText: {
+        textAlign: 'center',
     },
 });
