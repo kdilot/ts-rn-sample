@@ -14,7 +14,7 @@
         "@react-native-seoul/kakao-login": "^2.3.0",
         "@types/styled-components": "^4.4.2",
         "react": "16.9.0",
-        "react-native": "0.61.5",
+        "react-native": "0.62.3",
         "react-native-barcode-mask": "^1.1.0",
         "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera.git",
         "react-native-fingerprint-scanner": "^3.0.2",
